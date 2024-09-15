@@ -1,0 +1,220 @@
+{
+  "favorites": [
+    {
+      "id": "3RgwEAAAQBAJ",
+      "kind": "books#volume",
+      "etag": "QYZ5ll6v5+g",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/3RgwEAAAQBAJ",
+      "volumeInfo": {
+        "title": "Organization Development",
+        "subtitle": "A Practitioner's Guide for OD and HR",
+        "authors": ["Mee-Yan Cheung-Judge", "Linda Holbeche"],
+        "publisher": "Kogan Page Publishers",
+        "publishedDate": "2021-06-03",
+        "description": "Organization Development (OD) is key to ensuring that organizations and their people can adapt to and engage in ongoing change in today's fast-paced and competitive world. How can those responsible for managing change determine the most appropriate course of action for their organization's needs and maximize capability? Written by two of the leading experts in the field, Organization Development is an essential guide to the theories, practices, tools and techniques for achieving success. It explores the role of HR in relation to OD, and connected areas such as organization design, building organizational agility and resilience, and culture change. Alongside international case studies from organizations including Ernst & Young, Nationwide, Lockheed Martin and the University of Sheffield, UK, this revised third edition of Organization Development contains new chapters on building an adaptive culture of learning and innovation and organization health and 'use of self'. With fresh material on digitization, OD in SMEs, and competence profiles, this is an indispensable handbook to understanding, communicating and implementing organization development approaches for both experienced practitioners and students.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781789667929"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1789667925"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 577,
+        "printType": "BOOK",
+        "categories": ["Business & Economics"],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=3RgwEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=3RgwEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com.br/books?id=3RgwEAAAQBAJ&printsec=frontcover&dq=o+d&hl=&cd=1&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=3RgwEAAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=3RgwEAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "BR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 245.44,
+          "currencyCode": "BRL"
+        },
+        "retailPrice": {
+          "amount": 245.44,
+          "currencyCode": "BRL"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=3RgwEAAAQBAJ&rdid=book-3RgwEAAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 245440000,
+              "currencyCode": "BRL"
+            },
+            "retailPrice": {
+              "amountInMicros": 245440000,
+              "currencyCode": "BRL"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "BR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com.br/books/download/Organization_Development-sample-epub.acsm?id=3RgwEAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com.br/books/download/Organization_Development-sample-pdf.acsm?id=3RgwEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=3RgwEAAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "With fresh material on digitization, OD in SMEs, and competence profiles, this is an indispensable handbook to understanding, communicating and implementing organization development approaches for both experienced practitioners and students ..."
+      },
+      "favorite": false,
+      "rate": 4,
+      "notes": [
+        {
+          "id": "13537a12-29e9-4dbb-8af9-19f20660f9b5",
+          "note": "Nova notaaaaa",
+          "tags": [
+            {
+              "display": "top",
+              "value": "top"
+            }
+          ]
+        },
+        {
+          "id": "e5ee4a42-1a4b-4f4b-8f66-b3803f8180ad",
+          "note": "Nota top demais",
+          "tags": [
+            {
+              "display": "top",
+              "value": "top"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HdjWEAAAQBAJ",
+      "kind": "books#volume",
+      "etag": "FhWubgfzP6U",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/HdjWEAAAQBAJ",
+      "volumeInfo": {
+        "title": "Quem é Este?",
+        "authors": ["Juan Molina Hueso"],
+        "publisher": "Aprisco (GodBooks)",
+        "publishedDate": "2023-09-13",
+        "description": "O livro que você tem em mãos parte de uma questão de grande relevância para a fé cristã: quem é Jesus Cristo? Antes de fazer a sua viagem histórico-teológica, o autor indaga: “Quem está devidamente qualificado para responder a essa pergunta?” Assim, ele percorre a história da Igreja, os principais concílios e chega ao século 20, mostrando interpretações deficientes, incompletas e mesmo heréticas, até chegar à resposta final, de essencial importância para todo aquele que deseja compreender quem verdadeiramente foi Jesus Cristo.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9786589198147"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "6589198144"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 124,
+        "printType": "BOOK",
+        "categories": ["Religion"],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.2.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=HdjWEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=HdjWEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "pt-BR",
+        "previewLink": "http://books.google.com.br/books?id=HdjWEAAAQBAJ&printsec=frontcover&dq=quem&hl=&cd=1&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=HdjWEAAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=HdjWEAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "BR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 28,
+          "currencyCode": "BRL"
+        },
+        "retailPrice": {
+          "amount": 28,
+          "currencyCode": "BRL"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=HdjWEAAAQBAJ&rdid=book-HdjWEAAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 28000000,
+              "currencyCode": "BRL"
+            },
+            "retailPrice": {
+              "amountInMicros": 28000000,
+              "currencyCode": "BRL"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "BR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com.br/books/download/Quem_%C3%A9_Este-sample-epub.acsm?id=HdjWEAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com.br/books/download/Quem_%C3%A9_Este-sample-pdf.acsm?id=HdjWEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=HdjWEAAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "O livro que você tem em mãos parte de uma questão de grande relevância para a fé cristã: quem é Jesus Cristo?"
+      },
+      "favorite": true,
+      "rate": 3,
+      "notes": []
+    }
+  ]
+}

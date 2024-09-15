@@ -1,0 +1,423 @@
+<button
+  class="btn button btn-primary mx-auto fw-bold align-buttons"
+  type="button"
+  data-bs-toggle="offcanvas"
+  data-bs-target="#offcanvasLeft"
+  aria-controls="offcanvasLeft"
+>
+  Favoritos <mat-icon>visibility</mat-icon>
+</button>
+
+<div
+  class="offcanvas offcanvas-start"
+  tabindex="-1"
+  id="offcanvasLeft"
+  aria-labelledby="offcanvasLeftLabel"
+  style="width: 45%"
+>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLeftLabel">Favoritos:</h5>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="col-md10">
+      <div *ngFor="let favorite of getFavorites() | async">
+        <div class="card mb-3" style="max-width: 100%">
+          <div class="row g-0">
+            <div class="col-md-3">
+              <img
+                [src]="
+                  favorite?.volumeInfo?.imageLinks?.thumbnail ??
+                  './assets/images/Image-not-available.png'
+                "
+                width="100%"
+                height="100%"
+                alt="Capa do livro"
+              />
+            </div>
+            <div class="col-md-9">
+              <div class="card-body">
+                <h5 class="card-title">{{ favorite.volumeInfo.title }}</h5>
+                <p
+                  class="card-text"
+                  style="overflow: hidden; height: 100px; overflow-y: scroll"
+                >
+                  {{ favorite.volumeInfo.description }}
+                </p>
+                <p class="card-text">
+                  <small class="text-body-secondary"
+                    >Autor:
+                    {{ favorite?.volumeInfo?.authors?.join(", ") }}</small
+                  >
+                </p>
+                <div
+                  class="d-flex justify-content-start align-items-center mb-3"
+                >
+                  <star-rating
+                    id="{{ favorite.id }}"
+                    [hoverEnabled]="true"
+                    [rating]="favorite.rate || 0"
+                    size="large"
+                    (starClickChange)="onRatingClick(favorite.id)"
+                    >></star-rating
+                  >
+                </div>
+
+                <div class="d-flex gap-3">
+                  <button
+                    class="btn btn-danger text-white"
+                    data-bs-toggle="modal"
+                    data-bs-target="#deleteBook"
+                    (click)="selectFavorite(favorite)"
+                  >
+                    <mat-icon>delete</mat-icon>
+                  </button>
+
+                  <button
+                    class="btn btn-primary align-buttons"
+                    data-bs-toggle="modal"
+                    data-bs-target="#note"
+                    (click)="selectFavorite(favorite)"
+                  >
+                    <mat-icon>note_add</mat-icon> Nova Nota
+                  </button>
+
+                  <button
+                    class="btn btn-primary align-buttons"
+                    data-bs-toggle="modal"
+                    data-bs-target="#notes"
+                    (click)="selectFavorite(favorite)"
+                  >
+                    <mat-icon>notes</mat-icon> Ver notas
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="note"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-body pt-4 px-5">
+        <button
+          type="button"
+          class="btn-close ms-auto"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          style="position: absolute; right: 15px"
+        ></button>
+
+        <div class="d-flex justify-content-center align-items-center gap-4">
+          <img
+            [src]="
+              selectedFavorite?.volumeInfo?.imageLinks?.thumbnail ??
+              './assets/images/Image-not-available.png'
+            "
+            class="rounded"
+            height="250"
+            alt="..."
+          />
+
+          <div
+            class="d-flex justify-content-center align-items-start flex-column w-75"
+          >
+            <p class="fw-bold fs-4">
+              {{ selectedFavorite && selectedFavorite.volumeInfo.title }}
+            </p>
+            <div class="form-group w-100">
+              <textarea
+                id="comment"
+                [(ngModel)]="newNote"
+                class="form-control"
+                placeholder="Digite sua nota aqui..."
+                style="height: 150px; resize: none"
+                type="text"
+                name="comment"
+                required=""
+              ></textarea>
+
+              <div class="my-3 rounded px-3 p-1 border">
+                <tag-input
+                  [theme]="'bootstrap'"
+                  [ripple]="false"
+                  [maxItems]="3"
+                  placeholder="Insira uma nova tag"
+                  [secondaryPlaceholder]="'Insira uma tag'"
+                  *ngIf="selectedFavorite && selectedFavorite.tags"
+                  [(ngModel)]="selectedFavorite.tags"
+                ></tag-input>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer" style="border-top: 0; padding-top: 0">
+        <button
+          id="btn-save-rate"
+          class="btn btn-primary align-buttons"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="addNote()"
+        >
+          <mat-icon>save</mat-icon> Salvar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="notes"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-body pt-4 px-5">
+        <button
+          type="button"
+          class="btn-close ms-auto"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          style="position: absolute; right: 15px"
+        ></button>
+
+        <div
+          class="d-flex flex-column justify-content-center align-items-center gap-4"
+        >
+          <div class="search-wrapper">
+            <i class="bi bi-search"></i>
+            <form class="w-100" [formGroup]="searchNotesForm">
+              <input
+                class="search-input"
+                formControlName="searchNotesQuery"
+                placeholder="Digite para pesquisar uma nota pela tag..."
+              />
+            </form>
+          </div>
+
+          <div *ngIf="selectedFavorite" class="w-100">
+            <div *ngFor="let note of selectedFavorite.notes">
+              <div class="card mb-5 w-100">
+                <div class="card-body">
+                  <h5 class="card-title">Nota:</h5>
+                  <p class="card-text">
+                    {{ note.note }}
+                  </p>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title">Tags:</h5>
+                  <div class="my-3 rounded px-3 p-1 border">
+                    <tag-input
+                      [theme]="'bootstrap'"
+                      [ripple]="false"
+                      [maxItems]="3"
+                      *ngIf="note && note.tags"
+                      [(ngModel)]="note.tags"
+                      [hideForm]="true"
+                      [removable]="false"
+                    ></tag-input>
+                  </div>
+                </div>
+
+                <div class="card-footer d-flex justify-content-end gap-2">
+                  <button
+                    class="btn btn-danger align-buttons"
+                    data-bs-toggle="modal"
+                    data-bs-target="#deleteNote"
+                    (click)="selectNote(note)"
+                  >
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                  <button
+                    class="btn btn-primary align-buttons"
+                    data-bs-toggle="modal"
+                    data-bs-target="#editNote"
+                    (click)="selectNote(note)"
+                  >
+                    <mat-icon>edit_note</mat-icon> Editar Nota
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="editNote"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-body pt-4 px-5">
+        <button
+          type="button"
+          class="btn-close ms-auto"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          style="position: absolute; right: 15px"
+        ></button>
+
+        <div class="d-flex justify-content-center align-items-center gap-4">
+          <div
+            class="d-flex justify-content-center align-items-start flex-column w-75"
+          >
+            <div class="form-group w-100">
+              <textarea
+                id="comment"
+                *ngIf="selectedNote && selectedNote.note"
+                [(ngModel)]="selectedNote.note"
+                class="form-control"
+                placeholder="Adicione sua análise"
+                style="height: 150px; resize: none"
+                type="text"
+                name="comment"
+              >
+              </textarea>
+              <div class="my-3 rounded px-3 p-1 border">
+                <tag-input
+                  [theme]="'bootstrap'"
+                  [ripple]="false"
+                  [maxItems]="3"
+                  placeholder="Insira uma nova tag"
+                  [secondaryPlaceholder]="'Insira uma tag'"
+                  *ngIf="selectedNote && selectedNote.tags"
+                  [(ngModel)]="selectedNote.tags"
+                ></tag-input>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer" style="border-top: 0; padding-top: 0">
+        <button
+          id="btn-save-rate"
+          class="btn btn-primary align-buttons"
+          type="submit"
+          data-bs-toggle="modal"
+          data-bs-target="#notes"
+          (click)="editNote()"
+        >
+          <mat-icon>save</mat-icon> Salvar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="deleteNote"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Confirmar exclusão</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Tem certeza que deseja apagar a nota? Essa ação não pode ser desfeita.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Cancelar
+        </button>
+        <button
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#notes"
+          class="btn btn-danger"
+          (click)="deleteNote()"
+        >
+          Deletar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="deleteBook"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Confirmar exclusão</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Tem certeza que deseja apagar o livro
+          <span class="fw-bold">{{
+            selectedFavorite && selectedFavorite.volumeInfo.title
+          }}</span>
+          dos seus favoritos? Essa ação não pode ser desfeita.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Cancelar
+        </button>
+        <button
+          type="button"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          class="btn btn-danger"
+          (click)="deleteFavoriteBook(selectedFavorite.id)"
+        >
+          Deletar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

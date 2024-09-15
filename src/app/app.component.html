@@ -1,0 +1,63 @@
+<main class="container my-5">
+  <div class="container col-8">
+    <app-favorites></app-favorites>
+
+    <div class="search-wrapper w-100 mt-4">
+      <i class="bi bi-search"></i>
+      <form class="w-100" [formGroup]="searchBooksForm">
+        <input
+          class="search-input"
+          formControlName="searchBooksQuery"
+          placeholder="Pesquise o nome de um livro/autor"
+        />
+      </form>
+    </div>
+
+    <div *ngIf="books.length > 0">
+      <h2 class="mb-3 fs-4">Resultados:</h2>
+      <div>
+        <div *ngFor="let book of books" [attr.data-id]="book.id" #bookElement>
+          <div class="card mb-3" style="max-width: 100%; max-height: 320px">
+            <div class="row g-0">
+              <div class="col-md-3">
+                <img
+                  [src]="
+                    book?.volumeInfo?.imageLinks?.thumbnail ??
+                    './assets/images/Image-not-available.png'
+                  "
+                  width="100%"
+                  height="320px"
+                  alt="Capa do livro"
+                />
+              </div>
+              <div class="col-md-9">
+                <div class="card-body">
+                  <h5 class="card-title">{{ book.volumeInfo.title }}</h5>
+                  <p
+                    class="card-text"
+                    style="overflow: hidden; height: 150px; overflow-y: scroll"
+                  >
+                    {{ book.volumeInfo.description }}
+                  </p>
+                  <p class="card-text">
+                    <small class="text-body-secondary"
+                      >Autor: {{ book.volumeInfo.authors?.join(", ") }}</small
+                    >
+                  </p>
+
+                  <button mat-icon-button (click)="toggleFavoriteBook(book.id)">
+                    <mat-icon *ngIf="book.favorite"> favorite </mat-icon>
+
+                    <mat-icon *ngIf="!book.favorite">
+                      favorite_border
+                    </mat-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
