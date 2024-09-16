@@ -7,9 +7,7 @@
       "selfLink": "https://www.googleapis.com/books/v1/volumes/HdjWEAAAQBAJ",
       "volumeInfo": {
         "title": "Quem é Este?",
-        "authors": [
-          "Juan Molina Hueso"
-        ],
+        "authors": ["Juan Molina Hueso"],
         "publisher": "Aprisco (GodBooks)",
         "publishedDate": "2023-09-13",
         "description": "O livro que você tem em mãos parte de uma questão de grande relevância para a fé cristã: quem é Jesus Cristo? Antes de fazer a sua viagem histórico-teológica, o autor indaga: “Quem está devidamente qualificado para responder a essa pergunta?” Assim, ele percorre a história da Igreja, os principais concílios e chega ao século 20, mostrando interpretações deficientes, incompletas e mesmo heréticas, até chegar à resposta final, de essencial importância para todo aquele que deseja compreender quem verdadeiramente foi Jesus Cristo.",
@@ -29,9 +27,7 @@
         },
         "pageCount": 124,
         "printType": "BOOK",
-        "categories": [
-          "Religion"
-        ],
+        "categories": ["Religion"],
         "maturityRating": "NOT_MATURE",
         "allowAnonLogging": false,
         "contentVersion": "0.1.2.0.preview.3",
@@ -99,6 +95,127 @@
       },
       "favorite": true,
       "rate": 3,
+      "notes": [
+        {
+          "id": "ec315af7-1e6b-4353-a55e-565e1c5c1f27",
+          "note": "Jesus note",
+          "tags": [
+            {
+              "display": "Jesus",
+              "value": "Jesus"
+            },
+            {
+              "display": "Cristo",
+              "value": "Cristo"
+            }
+          ]
+        },
+        {
+          "id": "e44bbe4f-f886-4614-816d-16917f631521",
+          "note": "Eita livrão bom",
+          "tags": [
+            {
+              "display": "quem",
+              "value": "quem"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D_kCEQAAQBAJ",
+      "kind": "books#volume",
+      "etag": "6AAxTTd3xY8",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/D_kCEQAAQBAJ",
+      "volumeInfo": {
+        "title": "Mais Esperto Que O Diabo",
+        "authors": ["Napoleon Hill"],
+        "publisher": "Clube de Autores",
+        "publishedDate": "2024-04-02",
+        "description": "O livro Mais Esperto que o Diabo foi escrito como uma sessão de perguntas e respostas entre Napoleon Hill e o próprio Diabo, que afirma influenciar 98% da população através de 6 grandes medos que a maioria das pessoas tem. Escondido desde 1938, este livro não somente é uma fonte de inspiração e coragem, mas também deve ser considerado um manual para todas aquelas pessoas que desejam ser mais espertas que seus medos, problemas e limitações.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9788568014004"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "8568014003"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 162,
+        "printType": "BOOK",
+        "categories": ["Self-Help"],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=D_kCEQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=D_kCEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "pt-BR",
+        "previewLink": "http://books.google.com.br/books?id=D_kCEQAAQBAJ&printsec=frontcover&dq=Mais+esperto+que+o+diabo&hl=&cd=1&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=D_kCEQAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=D_kCEQAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "BR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 23.62,
+          "currencyCode": "BRL"
+        },
+        "retailPrice": {
+          "amount": 23.62,
+          "currencyCode": "BRL"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=D_kCEQAAQBAJ&rdid=book-D_kCEQAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 23620000,
+              "currencyCode": "BRL"
+            },
+            "retailPrice": {
+              "amountInMicros": 23620000,
+              "currencyCode": "BRL"
+            },
+            "giftable": true
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "BR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com.br/books/download/Mais_Esperto_Que_O_Diabo-sample-pdf.acsm?id=D_kCEQAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=D_kCEQAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "O livro Mais Esperto que o Diabo foi escrito como uma sessão de perguntas e respostas entre Napoleon Hill e o próprio Diabo, que afirma influenciar 98% da população através de 6 grandes medos que a maioria das pessoas tem."
+      },
+      "favorite": true,
+      "rate": 2,
       "notes": []
     }
   ]

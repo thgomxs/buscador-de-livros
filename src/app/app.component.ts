@@ -18,9 +18,9 @@ export class AppComponent implements OnInit {
 
   filters = [
     { name: 'Autor', value: 'inauthor' },
-    { name: 'Nome', value: 'intitle' },
+    { name: 'Nome', value: '' },
   ];
-  selectedFilter = 'intitle';
+  selectedFilter = '';
 
   constructor(
     private _bookService: BookService,
