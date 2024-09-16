@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from './services/book.service';
 import { FavoriteService } from './services/favorite.service';
-import { Title } from '@angular/platform-browser';
 import { Book } from './models/book.model';
 import { FormControl, FormGroup } from '@angular/forms';
 import { debounceTime, take } from 'rxjs/operators';
