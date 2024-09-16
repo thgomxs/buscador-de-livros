@@ -15,6 +15,10 @@
     Uma aplicação fruto de um desafio, consistindo em um buscador de livros feito em Angular que consome a API pública de livros Google Books API. Sendo possível adicionar notas a cada livro e realizar pesquisas nas mesmas através de tags.
 </p>
 
+<p align="center">
+    <a href="https://buscador-de-livros-steel.vercel.app">Faça um teste da aplicação aqui</a>
+</p>
+
 <h2 id="tech">💻 Tecnologias</h2>
 
 - Node
