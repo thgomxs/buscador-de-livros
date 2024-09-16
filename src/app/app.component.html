@@ -8,9 +8,18 @@
         <input
           class="search-input"
           formControlName="searchBooksQuery"
-          placeholder="Pesquise o nome de um livro/autor"
+          placeholder="Pesquise por um livro"
         />
       </form>
+
+      <div class="filterWrapper d-flex">
+        <p>Filtrar por:</p>
+        <select id="filter" name="filter" [(ngModel)]="selectedFilter">
+          <option *ngFor="let filter of filters" [value]="filter.value">
+            {{ filter.name }}
+          </option>
+        </select>
+      </div>
     </div>
 
     <div *ngIf="books.length > 0">

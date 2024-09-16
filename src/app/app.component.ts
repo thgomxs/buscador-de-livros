@@ -17,33 +17,45 @@ export class AppComponent implements OnInit {
   query: string = '';
   searchBooksForm: FormGroup;
 
+  filters = [
+    { name: 'Autor', value: 'inauthor' },
+    { name: 'Nome', value: 'intitle' },
+  ];
+  selectedFilter = 'intitle';
+
   constructor(
     private _bookService: BookService,
     private _favoriteService: FavoriteService
   ) {}
+
+  onChange(event: Event) {
+    console.log(event.target);
+  }
 
   searchBooks() {
     this.searchBooksForm
       .get('searchBooksQuery')
       ?.valueChanges.pipe(debounceTime(300))
       .subscribe((query) => {
-        this._bookService.getBooks(query).subscribe((data: Book[]) => {
-          this.books = data.map((book) => {
-            this._favoriteService.favorites$
-              .pipe(take(1))
-              .subscribe((favorites) => {
-                favorites.forEach((favorite) => {
-                  if (favorite.id == book.id) {
-                    book.favorite = true;
-                  } else {
-                    book.favorite = false;
-                  }
+        this._bookService
+          .getBooks(query, this.selectedFilter)
+          .subscribe((data: Book[]) => {
+            this.books = data.map((book) => {
+              this._favoriteService.favorites$
+                .pipe(take(1))
+                .subscribe((favorites) => {
+                  favorites.forEach((favorite) => {
+                    if (favorite.id == book.id) {
+                      book.favorite = true;
+                    } else {
+                      book.favorite = false;
+                    }
+                  });
                 });
-              });
 
-            return book;
+              return book;
+            });
           });
-        });
       });
   }
 
