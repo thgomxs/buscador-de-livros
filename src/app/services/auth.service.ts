@@ -31,5 +31,6 @@ export class AuthService {
     this._isAuthenticated = false;
     localStorage.removeItem('username');
     this.router.navigate(['/login']);
+    window.location.reload();
   }
 }
