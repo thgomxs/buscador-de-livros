@@ -48,6 +48,7 @@ git clone https://github.com/thgomxs/buscador-de-livros.git
 <h3>Instalação</h3>
 
 ```bash
+cd buscador-de-livros
 npm install
 ```
 
@@ -65,7 +66,6 @@ googleApiURL: 'https://www.googleapis.com/books/v1/volumes',
 Como inicar seu projeto localmente em desenvolvimento. Iniciará o app localmente em modo de desenvolvimento e também inicia o json-server.
 
 ```bash
-cd buscador-de-livros
 npm run start
 ```
 
@@ -74,14 +74,12 @@ npm run start
 Como fazer build da aplicação para produção, lembre-se de mudar as váriaveis de ambiente em `.environment.ts`. A build será feita em `/dist`.
 
 ```bash
-cd buscador-de-livros
 npm run build
 ```
 
 Para iniciar a build localmente e testar, será necessário instalar o `http-server` globalmente em sua máquina e executar a build.
 
 ```bash
-cd buscador-de-livros
 npm install -g http-server
 http-server ./dist/buscador-de-livros/browser
 ```
