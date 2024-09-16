@@ -10,13 +10,13 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   username: string = '';
 
-  constructor(private authService: AuthService, private router: Router) {
-    if (this.authService.isAuthenticated()) {
+  constructor(private _authService: AuthService, private router: Router) {
+    if (this._authService.isAuthenticated()) {
       this.router.navigate(['/']);
     }
   }
 
   login(): void {
-    this.authService.login(this.username);
+    this._authService.login(this.username);
   }
 }

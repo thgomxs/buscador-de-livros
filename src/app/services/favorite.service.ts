@@ -19,7 +19,7 @@ export class FavoriteService {
 
   constructor(
     private _httpClient: HttpClient,
-    private toastService: ToastService,
+    private _toastService: ToastService,
     private _authService: AuthService
   ) {
     this.getFavorites();
@@ -114,21 +114,23 @@ export class FavoriteService {
       );
 
       if (selectedFavorite.length > 0) {
-        this.toastService.toastError('Este livro já está nos seus favoritos!');
+        this._toastService.toastError('Este livro já está nos seus favoritos!');
       } else {
         this._httpClient
           .post<Book>(this._apiURL, book)
           .pipe(tap(() => this.getFavorites()))
           .subscribe({
             error: (error) => {
-              this.toastService.toastError(
+              this._toastService.toastError(
                 'Erro ao adicionar livro aos favoritos!'
               );
 
               console.log(error);
             },
             complete: () => {
-              this.toastService.toastSuccess('Livro adicionado aos favoritos!');
+              this._toastService.toastSuccess(
+                'Livro adicionado aos favoritos!'
+              );
             },
           });
       }
