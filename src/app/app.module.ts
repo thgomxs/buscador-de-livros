@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module'; // Importar o módulo d
 
 // Componentes e serviços
 import { AppComponent } from './app.component';
-import { Title } from '@angular/platform-browser';
 import { provideHttpClient } from '@angular/common/http';
 import { FavoritesModule } from './components/favorites/favorites.module';
 import { MatButtonModule } from '@angular/material/button';
@@ -24,7 +23,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatIconModule,
     ReactiveFormsModule,
   ],
-  providers: [provideHttpClient(), Title],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
