@@ -1,0 +1,38 @@
+<div
+  class="d-flex justify-content-center align-items-center"
+  style="height: 90vh"
+>
+  <div
+    class="container p-4 d-flex flex-column"
+    style="max-width: 600px; width: 100%"
+  >
+    <h2 class="text-center mb-4 fw-bold text-uppercase">Login</h2>
+    <div class="mb-3">
+      <input
+        [(ngModel)]="username"
+        class="form-control mx-auto"
+        placeholder="Usuário"
+        style="width: 200px"
+      />
+    </div>
+    <button
+      class="btn btn-primary mx-auto"
+      style="width: 200px"
+      (click)="login()"
+    >
+      Entrar
+    </button>
+    <span class="text-danger text-center mt-4" style="font-size: 0.8rem"
+      >Todos os livros são removidos a cada 1 hora, acesso apenas para
+      teste!</span
+    >
+  </div>
+</div>
+
+<div class="credits">
+  <span>Desenvolvido por: </span>
+
+  <a href="https://github.com/thgomxs" style="text-decoration: none"
+    >&#64;thgomxs</a
+  >
+</div>

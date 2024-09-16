@@ -9,10 +9,13 @@ import { SharedModule } from './shared.module';
 
 // Components
 import { AppComponent } from './app.component';
+import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [FavoritesModule, SharedModule],
+  declarations: [AppComponent, LoginComponent, HomeComponent],
+  imports: [FavoritesModule, SharedModule, AppRoutingModule],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent],
 })
