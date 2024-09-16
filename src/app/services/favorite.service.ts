@@ -114,9 +114,11 @@ export class FavoriteService {
           .pipe(tap(() => this.getFavorites()))
           .subscribe({
             error: (error) => {
-              this.toastService.toastSuccess(
+              this.toastService.toastError(
                 'Erro ao adicionar livro aos favoritos!'
               );
+
+              console.log(error);
             },
             complete: () => {
               this.toastService.toastSuccess('Livro adicionado aos favoritos!');
