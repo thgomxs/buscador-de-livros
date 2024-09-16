@@ -1,75 +1,75 @@
 {
   "favorites": [
     {
-      "id": "HdjWEAAAQBAJ",
+      "id": "XrLGEAAAQBAJ",
       "kind": "books#volume",
-      "etag": "FhWubgfzP6U",
-      "selfLink": "https://www.googleapis.com/books/v1/volumes/HdjWEAAAQBAJ",
+      "etag": "stWGt63893w",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/XrLGEAAAQBAJ",
       "volumeInfo": {
-        "title": "Quem é Este?",
+        "title": "Revelando o maior segredo de Napoleon Hill",
         "authors": [
-          "Juan Molina Hueso"
+          "Napoleon Hill"
         ],
-        "publisher": "Aprisco (GodBooks)",
-        "publishedDate": "2023-09-13",
-        "description": "O livro que você tem em mãos parte de uma questão de grande relevância para a fé cristã: quem é Jesus Cristo? Antes de fazer a sua viagem histórico-teológica, o autor indaga: “Quem está devidamente qualificado para responder a essa pergunta?” Assim, ele percorre a história da Igreja, os principais concílios e chega ao século 20, mostrando interpretações deficientes, incompletas e mesmo heréticas, até chegar à resposta final, de essencial importância para todo aquele que deseja compreender quem verdadeiramente foi Jesus Cristo.",
+        "publisher": "Grupo Editorial Citadel",
+        "publishedDate": "2023-06-22",
+        "description": "Neste livro inovador, o maior especialista mundial em Napoleon Hill, Don M. Green, destila a essência dos princípios de sucesso mundialmente famosos do maior autor motivacional do mundo. Em uma palavra, o maior segredo de Hill é \"ação\". Se você dominar esse conceito, poderá realmente alcançar o sucesso que imagina em sua vida. Este livro vai te ensinar como. Para Napoleon Hill, tudo começa com uma Atitude Mental Positiva (AMP), e Don Green fornece as ferramentas que o ajudarão a desenvolver e manter esse estado de espírito confiante. O livro é recheado de exercícios, dicas práticas para colocar os conceitos de Hill em ação e verdades motivacionais que o ajudarão a permanecer no caminho enquanto se esforça para alcançar seus objetivos. O maior segredo de Napoleon Hill o levará a descobrir o que você define como sucesso, desenvolver um plano para criar esse sucesso e, em seguida, seguir seu plano. E se o fizer, não se sentirá mais a mesma pessoa. Outras pessoas perceberão que você mudou. Elas mudarão a maneira como reagem a você, e suas ideias sobre quem você é e o que pode fazer também mudarão. Se você ler este livro, sua vida vai mudar. Nada será como antes.",
         "industryIdentifiers": [
           {
             "type": "ISBN_13",
-            "identifier": "9786589198147"
+            "identifier": "9786550473518"
           },
           {
             "type": "ISBN_10",
-            "identifier": "6589198144"
+            "identifier": "6550473519"
           }
         ],
         "readingModes": {
           "text": true,
           "image": true
         },
-        "pageCount": 124,
+        "pageCount": 308,
         "printType": "BOOK",
         "categories": [
-          "Religion"
+          "Business & Economics"
         ],
         "maturityRating": "NOT_MATURE",
         "allowAnonLogging": false,
-        "contentVersion": "0.1.2.0.preview.3",
+        "contentVersion": "1.1.1.0.preview.3",
         "panelizationSummary": {
           "containsEpubBubbles": false,
           "containsImageBubbles": false
         },
         "imageLinks": {
-          "smallThumbnail": "http://books.google.com/books/content?id=HdjWEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-          "thumbnail": "http://books.google.com/books/content?id=HdjWEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          "smallThumbnail": "http://books.google.com/books/content?id=XrLGEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=XrLGEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
         },
         "language": "pt-BR",
-        "previewLink": "http://books.google.com.br/books?id=HdjWEAAAQBAJ&printsec=frontcover&dq=quem&hl=&cd=1&source=gbs_api",
-        "infoLink": "https://play.google.com/store/books/details?id=HdjWEAAAQBAJ&source=gbs_api",
-        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=HdjWEAAAQBAJ"
+        "previewLink": "http://books.google.com.br/books?id=XrLGEAAAQBAJ&printsec=frontcover&dq=Napoleon+Hill+inauthor&hl=&cd=1&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=XrLGEAAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=XrLGEAAAQBAJ"
       },
       "saleInfo": {
         "country": "BR",
         "saleability": "FOR_SALE",
         "isEbook": true,
         "listPrice": {
-          "amount": 28,
+          "amount": 31.9,
           "currencyCode": "BRL"
         },
         "retailPrice": {
-          "amount": 28,
+          "amount": 31.9,
           "currencyCode": "BRL"
         },
-        "buyLink": "https://play.google.com/store/books/details?id=HdjWEAAAQBAJ&rdid=book-HdjWEAAAQBAJ&rdot=1&source=gbs_api",
+        "buyLink": "https://play.google.com/store/books/details?id=XrLGEAAAQBAJ&rdid=book-XrLGEAAAQBAJ&rdot=1&source=gbs_api",
         "offers": [
           {
             "finskyOfferType": 1,
             "listPrice": {
-              "amountInMicros": 28000000,
+              "amountInMicros": 31900000,
               "currencyCode": "BRL"
             },
             "retailPrice": {
-              "amountInMicros": 28000000,
+              "amountInMicros": 31900000,
               "currencyCode": "BRL"
             },
             "giftable": true
@@ -84,36 +84,31 @@
         "textToSpeechPermission": "ALLOWED",
         "epub": {
           "isAvailable": true,
-          "acsTokenLink": "http://books.google.com.br/books/download/Quem_%C3%A9_Este-sample-epub.acsm?id=HdjWEAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+          "acsTokenLink": "http://books.google.com.br/books/download/Revelando_o_maior_segredo_de_Napoleon_Hi-sample-epub.acsm?id=XrLGEAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
         },
         "pdf": {
           "isAvailable": true,
-          "acsTokenLink": "http://books.google.com.br/books/download/Quem_%C3%A9_Este-sample-pdf.acsm?id=HdjWEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+          "acsTokenLink": "http://books.google.com.br/books/download/Revelando_o_maior_segredo_de_Napoleon_Hi-sample-pdf.acsm?id=XrLGEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
         },
-        "webReaderLink": "http://play.google.com/books/reader?id=HdjWEAAAQBAJ&hl=&source=gbs_api",
+        "webReaderLink": "http://play.google.com/books/reader?id=XrLGEAAAQBAJ&hl=&source=gbs_api",
         "accessViewStatus": "SAMPLE",
         "quoteSharingAllowed": false
       },
       "searchInfo": {
-        "textSnippet": "O livro que você tem em mãos parte de uma questão de grande relevância para a fé cristã: quem é Jesus Cristo?"
+        "textSnippet": "Este livro vai te ensinar como. Para Napoleon Hill, tudo começa com uma Atitude Mental Positiva (AMP), e Don Green fornece as ferramentas que o ajudarão a desenvolver e manter esse estado de espírito confiante."
       },
       "favorite": true,
       "rate": 3,
       "notes": [
         {
-          "id": "e44bbe4f-f886-4614-816d-16917f631521",
-          "note": "Eita livrão bom",
+          "id": "57aef33a-a8d1-4c4a-8da9-8a76f9b75cc6",
+          "note": "Outra nota boa",
           "tags": [
             {
-              "display": "quem",
-              "value": "quem"
+              "display": "tag 3",
+              "value": "tag 3"
             }
           ]
-        },
-        {
-          "id": "06317447-4088-4546-8fae-f6342d13499f",
-          "note": "awdwa",
-          "tags": []
         }
       ]
     }
