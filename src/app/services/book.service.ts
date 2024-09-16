@@ -14,10 +14,6 @@ export class BookService {
   constructor(private _httpClient: HttpClient) {}
 
   getBooks(query: string, filter: string) {
-    console.log(`${this._googleApiURL}?q=${query}+${filter}`);
-
-    console.log(filter);
-
     const url = `${this._googleApiURL}?q=${query}+${filter}`;
     return this._httpClient
       .get<{ items: Book[] }>(url)

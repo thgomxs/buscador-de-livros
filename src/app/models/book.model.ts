@@ -2,6 +2,7 @@ import { Note } from './note.model';
 
 export interface Book {
   id: string;
+  username: string;
   selfLink: string;
   volumeInfo: {
     title: string;
@@ -22,4 +23,5 @@ export interface Book {
   rate?: number;
   notes?: Note[];
   favorite?: boolean;
+  createdAt?: string;
 }

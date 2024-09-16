@@ -1,0 +1,8 @@
+.credits {
+  width: 100vw;
+  gap: 0.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

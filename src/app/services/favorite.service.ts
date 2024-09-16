@@ -7,6 +7,7 @@ import { map, switchMap, take, tap } from 'rxjs/operators';
 import { Note } from '../models/note.model';
 
 import { ToastService } from './toast.service';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root',
@@ -18,14 +19,17 @@ export class FavoriteService {
 
   constructor(
     private _httpClient: HttpClient,
-    private toastService: ToastService
+    private toastService: ToastService,
+    private _authService: AuthService
   ) {
     this.getFavorites();
   }
 
   getFavorites() {
     return this._httpClient
-      .get<Book[]>(this._apiURL)
+      .get<Book[]>(
+        `${this._apiURL}?username=${this._authService.getUsername()}`
+      )
       .subscribe((favorites) => this.favoritesSubject.next(favorites));
   }
 
@@ -97,9 +101,12 @@ export class FavoriteService {
 
   addFavoriteBook(book: Book) {
     console.log('Add acionado');
-
+    book.username = this._authService.getUsername();
     book.rate = 0;
     book.notes = [];
+    book.createdAt = new Date().toLocaleString('pt-BR', {
+      timeZone: 'America/Sao_Paulo',
+    });
 
     this.favorites$.pipe(take(1)).subscribe((favorites) => {
       const selectedFavorite = favorites.filter(
