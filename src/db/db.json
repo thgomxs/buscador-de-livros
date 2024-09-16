@@ -7,9 +7,7 @@
       "selfLink": "https://www.googleapis.com/books/v1/volumes/XrLGEAAAQBAJ",
       "volumeInfo": {
         "title": "Revelando o maior segredo de Napoleon Hill",
-        "authors": [
-          "Napoleon Hill"
-        ],
+        "authors": ["Napoleon Hill"],
         "publisher": "Grupo Editorial Citadel",
         "publishedDate": "2023-06-22",
         "description": "Neste livro inovador, o maior especialista mundial em Napoleon Hill, Don M. Green, destila a essência dos princípios de sucesso mundialmente famosos do maior autor motivacional do mundo. Em uma palavra, o maior segredo de Hill é \"ação\". Se você dominar esse conceito, poderá realmente alcançar o sucesso que imagina em sua vida. Este livro vai te ensinar como. Para Napoleon Hill, tudo começa com uma Atitude Mental Positiva (AMP), e Don Green fornece as ferramentas que o ajudarão a desenvolver e manter esse estado de espírito confiante. O livro é recheado de exercícios, dicas práticas para colocar os conceitos de Hill em ação e verdades motivacionais que o ajudarão a permanecer no caminho enquanto se esforça para alcançar seus objetivos. O maior segredo de Napoleon Hill o levará a descobrir o que você define como sucesso, desenvolver um plano para criar esse sucesso e, em seguida, seguir seu plano. E se o fizer, não se sentirá mais a mesma pessoa. Outras pessoas perceberão que você mudou. Elas mudarão a maneira como reagem a você, e suas ideias sobre quem você é e o que pode fazer também mudarão. Se você ler este livro, sua vida vai mudar. Nada será como antes.",
@@ -29,9 +27,7 @@
         },
         "pageCount": 308,
         "printType": "BOOK",
-        "categories": [
-          "Business & Economics"
-        ],
+        "categories": ["Business & Economics"],
         "maturityRating": "NOT_MATURE",
         "allowAnonLogging": false,
         "contentVersion": "1.1.1.0.preview.3",
