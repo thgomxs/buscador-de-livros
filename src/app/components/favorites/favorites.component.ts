@@ -2,7 +2,6 @@ import { OnInit, Component, QueryList, ViewChildren } from '@angular/core';
 import { FavoriteService } from '../../services/favorite.service';
 import { ToastService } from '../../services/toast.service';
 
-import { Book } from '../../models/book.model';
 import { StarRatingComponent } from 'angular-star-rating';
 import { debounceTime, tap } from 'rxjs';
 import { FormControl, FormGroup } from '@angular/forms';

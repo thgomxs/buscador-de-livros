@@ -106,6 +106,12 @@ http-server ./dist/buscador-de-livros/browser
 
 <img src="https://github.com/user-attachments/assets/671403e9-2344-46c5-915a-1c76f8dccaa7" width="850px">
 
+<h2 id="implementations">📋 Implementações </h2>
+
+Alguns dos operadores rxjs que foram implementados neste projeto:
+
+`BehaviorSubject, map, debounceTime, tap, take`
+
 <h2 id="contribution">📫 Contribuindo para o buscador-de-livros </h2>
 
 Para contribuir com `buscador-de-livros`, siga estas etapas:
