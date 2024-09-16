@@ -1,28 +1,18 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { AppRoutingModule } from './app-routing.module'; // Importar o módulo de rotas
 
-// Componentes e serviços
-import { AppComponent } from './app.component';
+// Providers
 import { provideHttpClient } from '@angular/common/http';
+
+// Modules
 import { FavoritesModule } from './components/favorites/favorites.module';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
+import { SharedModule } from './shared.module';
+
+// Components
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    CommonModule,
-    FavoritesModule,
-    AppRoutingModule,
-    MatButtonModule,
-    MatIconModule,
-    ReactiveFormsModule,
-  ],
+  imports: [FavoritesModule, SharedModule],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent],
 })

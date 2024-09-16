@@ -1,27 +1,20 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+// Modules
 import { StarRatingModule } from 'angular-star-rating';
-import { FavoritesComponent } from './favorites.component';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-
-import { CommonModule } from '@angular/common';
 import { TagInputModule } from 'ngx-chips';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { SharedModule } from '../../shared.module';
+
+// Components
+import { FavoritesComponent } from './favorites.component';
 
 @NgModule({
   imports: [
-    CommonModule,
-    BrowserModule,
-    FormsModule,
+    SharedModule,
     TagInputModule,
-    MatButtonModule,
-    MatIconModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule,
     ToastrModule.forRoot({
       closeButton: true,
       timeOut: 5000,
