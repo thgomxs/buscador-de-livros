@@ -88,19 +88,19 @@ http-server ./dist/buscador-de-livros/browser
 
 É possível realizar pesquisas filtrando por título ou autor. São exibidas as informações de título, autor, descrição e capa do livro.
 
-<!-- imagem -->
+<img src="https://github.com/user-attachments/assets/f01a54ba-6c7a-4e5c-8fe8-acd780112861" width="850px">
 
 <h3>Favoritos</h3>
 
 É possível adicionar livros aos favoritos, dando a possibilidade de adicionar uma avaliação e criar notas.
 
-<!-- imagem -->
+<img src="https://github.com/user-attachments/assets/51494117-ecf4-40c0-b83f-e447a825a672" width="850px">
 
 <h3>Tags</h3>
 
 É possível filtrar as notas dos livros favoritos por tags
 
-<!-- imagem -->
+<img src="https://github.com/user-attachments/assets/671403e9-2344-46c5-915a-1c76f8dccaa7" width="850px">
 
 <h2 id="contribution">📫 Contribuindo para o buscador-de-livros </h2>
 
