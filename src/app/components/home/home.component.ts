@@ -33,34 +33,43 @@ export class HomeComponent implements OnInit {
     console.log(event.target);
   }
 
+  onToggleFilter() {
+    this.searchBooks();
+  }
+
   logout() {
     this._authService.logout();
   }
 
   searchBooks() {
+    this._bookService
+      .getBooks(this.query, this.selectedFilter)
+      .subscribe((data: Book[]) => {
+        this.books = data.map((book) => {
+          this._favoriteService.favorites$
+            .pipe(take(1))
+            .subscribe((favorites) => {
+              favorites.forEach((favorite) => {
+                if (favorite.id == book.id) {
+                  book.favorite = true;
+                } else {
+                  book.favorite = false;
+                }
+              });
+            });
+
+          return book;
+        });
+      });
+  }
+
+  onChangeSearchQuery() {
     this.searchBooksForm
       .get('searchBooksQuery')
       ?.valueChanges.pipe(debounceTime(300))
       .subscribe((query) => {
-        this._bookService
-          .getBooks(query, this.selectedFilter)
-          .subscribe((data: Book[]) => {
-            this.books = data.map((book) => {
-              this._favoriteService.favorites$
-                .pipe(take(1))
-                .subscribe((favorites) => {
-                  favorites.forEach((favorite) => {
-                    if (favorite.id == book.id) {
-                      book.favorite = true;
-                    } else {
-                      book.favorite = false;
-                    }
-                  });
-                });
-
-              return book;
-            });
-          });
+        this.query = query;
+        this.searchBooks();
       });
   }
 
@@ -81,6 +90,6 @@ export class HomeComponent implements OnInit {
       searchBooksQuery: new FormControl(''),
     });
 
-    this.searchBooks();
+    this.onChangeSearchQuery();
   }
 }

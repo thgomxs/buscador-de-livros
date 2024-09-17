@@ -19,7 +19,12 @@
 
       <div class="filterWrapper d-flex">
         <p>Filtrar por:</p>
-        <select id="filter" name="filter" [(ngModel)]="selectedFilter">
+        <select
+          id="filter"
+          name="filter"
+          (change)="onToggleFilter()"
+          [(ngModel)]="selectedFilter"
+        >
           <option *ngFor="let filter of filters" [value]="filter.value">
             {{ filter.name }}
           </option>
