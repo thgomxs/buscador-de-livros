@@ -19,9 +19,9 @@ export class HomeComponent implements OnInit {
 
   filters = [
     { name: 'Autor', value: 'inauthor' },
-    { name: 'Nome', value: '' },
+    { name: 'Nome', value: 'intitle' },
   ];
-  selectedFilter = '';
+  selectedFilter = 'intitle';
 
   constructor(
     private _bookService: BookService,
